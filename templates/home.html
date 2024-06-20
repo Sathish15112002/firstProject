@@ -1,0 +1,82 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+
+<head>
+  <title>DNA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+  .center{
+    position: relative;
+    left: 10px;
+    top: 10px;
+  }
+  .card-title {
+    position: relative;
+    left: 50px;
+  }
+  .c{
+    height: 281px;
+    width: 300px;
+    border: 2px solid black;
+    align-items: center;
+    position: relative;
+    left: 500px;
+
+  }
+  
+  .jumbotron{
+    height: 30px;
+  }
+  h1{
+    position: relative;
+    left: 550px;
+  }
+  
+
+</style>
+<body>
+
+<div class="jumbotron">
+  <h1>DNA</h1>
+</div>
+    <div class="c">
+      <a href="{% url 'index' %}">
+        <div class="card">
+          <img class="center" src="{% static 'images/dna.jpg' %}" alt="Notes image" width="250" height="200">
+          <div class="card-body offset-2">
+            <h5 class="card-title ">
+              DNA
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div><br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Why is DNA called?</h3>
+      <p>Because of its structure, DNA is commonly referred to as deoxyribonucleic acid. The nucleic acid has a phosphate backbone with bases such as adenine, cytosine, guanine, and thymine, while the deoxyribose portion contains pentose sugar.</p>
+      
+    </div>
+    <div class="col-sm-4">
+      <h3>How many DNA are in the human body?</h3>
+      <p>Each chromosome contains a single very long, linear DNA molecule. In the smallest human chromosomes this DNA molecule is composed of about 50 million nucleotide pairs; the largest chromosomes contain some 250 million nucleotide pairs. The diploid human genome is thus composed of 46 DNA molecules of 24 distinct types.</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Who discovered DNA?</h3>        
+      <p>What did the duo actually discover? Many people believe that American biologist James Watson and English physicist Francis Crick discovered DNA in the 1950s. In reality, this is not the case. Rather, DNA was first identified in the late 1860s by Swiss chemist Friedrich Miescher.</p>
+    </div>
+  </div>
+</div>
+
+
+</body>
+{% endblock content %}
